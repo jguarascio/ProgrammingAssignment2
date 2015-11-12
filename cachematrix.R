@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The purpose of these functions are to create a matrix object that can cache
+## the value of its inverse in order to avoid unnecessary recalculation.
 
-## Write a short comment describing this function
+## This makeCacheMatrix function creates a special matrix which is really a list 
+## that allows the user to set the matrix, get the matrix, set the inverse of 
+## the matrix, or get the inverse of the matrix
 
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
@@ -18,7 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## The cacheSolve function is used to calculate the matrix inversion and store it
+## in the getsolve list item.  If the getsolve item is already valued, 
+## the function will return the matrix inversion already stored.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
